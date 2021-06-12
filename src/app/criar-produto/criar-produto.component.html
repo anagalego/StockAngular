@@ -1,0 +1,33 @@
+<div class="shadow p-3 mb-5 bg-white rounded">
+  <h5>New Product</h5>
+  <table>
+    <tbody>
+      <tr [formGroup]="productForm">
+        <td class="col-1">
+          <button type="submit" class="btn btn-primary" (click)="createProduct()">Add</button>
+        </td>
+        <td class="form-group col-2">
+          <input formControlName="name" type="text" class="form-control" placeholder="Name" id="name">
+        </td>
+        <td class="form-group col-1">
+          <input formControlName="price" type="number" class="form-control" placeholder="Price" id="price" [value]="price" (change)="finalPrice = price">
+        </td>
+        <td class="form-group col-1">
+          <select formControlName="tax" class="form-select" id="tax" (change)="updateTax(tax)" required>
+            <option *ngFor="let tax of prodTaxes" [value]="tax">{{tax}}</option>
+          </select>
+        </td>
+        <td class="form-group col-1">
+          <input formControlName="discount" type="number" class="form-control" placeholder="Disc." id="discount" [value]="discount" (change)="updateDiscount(discount)">
+        </td>
+        <td class="form-group col-2">
+          <p>{{finalPrice}}</p>
+        </td>
+        <td class="form-group col-2">
+          <button type="submit" class="btn btn-primary shelves">Look for Shelves</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+

@@ -1,0 +1,24 @@
+<table class="table">
+  <thead>
+    <tr>
+      <th class="col-1">Id</th>
+      <th class="col-2">Name</th>
+      <th class="col-1">Price</th>
+      <th class="col-1">Tax</th>
+      <th class="col-1">Disc.</th>
+      <th class="col-2">Final Price</th>
+      <th class="col-2">Shelves</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let product of products">
+      <th>{{product.id}}</th>
+      <td>{{product.name}}</td>
+      <td>{{product.price}} €</td>
+      <td>{{product.tax}} %</td>
+      <td>{{product.discount}} %</td>
+      <td>{{product.finalPrice}} €</td>
+      <td>{{product.shelves}}</td>
+    </tr>
+  </tbody>
+</table>

@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    width: 80vw;
+    padding: auto;
+    margin: auto;
+    margin-top: 10vw;
+}
+
+h1, div {
+    margin-bottom: 5vw;
+}
+
+.btn-primary {
+    color: #7c67e9;
+    background-color: #d1caf3;
+    border-color: #7c67e9;
+    width: 100%;
+}
+
+.btn-primary:active, .btn-primary:hover {
+    color: #3a20be;
+    background-color: #7c67e9;
+    border-color: #3a20be;
+    width: 100%;
+}
+
+td p {
+    margin: auto;
+    margin-left: 5px;
+}
+
